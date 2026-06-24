@@ -1,14 +1,14 @@
 ---
-title: "Profit Hub: Your P&L Dashboard & Business Tracker"
+title: "Profit Hub: Your P&L Dashboard and Business Tracker"
 sidebarTitle: "Profit Hub"
 description: "Track total sales, net profit, expenses, and mileage in one place. Profit Hub turns your inventory data into a real-time view of your business."
 ---
 
-Profit Hub is your financial command center. It pulls data directly from your sold inventory and manually entered expenses to show you exactly what your reselling business made — by week, month, or year. No spreadsheets, no guessing. Open the Stats tab and see your real numbers.
+Profit Hub is your financial command center. It pulls data directly from your sold inventory and manually entered expenses to show you exactly what your reselling business made — by week, month, or year. No spreadsheets, no guessing. Open the **Profit Hub** tab and see your real numbers.
 
 ## Overview Tab: Your Business at a Glance
 
-The Overview tab greets you with four KPI cards at the top of the dashboard.
+The Overview tab greets you with four KPI cards at the top of the screen.
 
 <CardGroup cols={2}>
   <Card title="Total Sales" icon="dollar-sign">
@@ -27,7 +27,7 @@ The Overview tab greets you with four KPI cards at the top of the dashboard.
 
 ### Filtering by Time Period
 
-Tap the filter controls at the top of the dashboard to switch between **This Week**, **This Month**, and **This Year**. Every KPI card and chart on the page updates instantly to reflect the selected window, so you can compare your weekly pace against your monthly trend without leaving the screen.
+Tap the filter controls at the top of the screen to switch between **This Week**, **This Month**, and **This Year**. Every KPI card and chart on the page updates instantly to reflect the selected window, so you can compare your weekly pace against your monthly trend without leaving the screen.
 
 ### Sourcing Activity and Inventory Summary
 
@@ -43,9 +43,9 @@ Switch to the **P&L** sub-tab for your complete profit-and-loss statement. Every
 
 Revenue populates automatically from your inventory. Every item you mark as Sold with an actual sale price becomes a line in your P&L. The app uses that real sale price — not your original estimated price — along with your configured eBay fee rate and packaging cost to calculate the net profit on each sale.
 
-<Tip>
-  Always enter the actual sale price when you mark an item as Sold. That number flows directly into your P&L. If you leave it blank or use a placeholder, your revenue and profit figures will be off.
-</Tip>
+<Warning>
+  Revenue **only** populates from items marked Sold with an actual sale price entered. Items with a Listed status — or Sold items where you left the sale price blank — do not count toward revenue. Always enter the real sale price when you mark an item as Sold, or your revenue and profit figures will be understated.
+</Warning>
 
 ### Adding Expenses
 
@@ -70,14 +70,14 @@ All expenses reduce your net profit and appear as individual line items in the P
 
 ### Mileage Log
 
-Sourcing trips are a deductible business expense. Log your miles in the Mileage section and the app automatically calculates your IRS deduction.
+Sourcing trips are a deductible business expense. Log your miles in the Mileage section and the app automatically calculates your IRS deduction and records it under the **Gas & Travel** expense category.
 
 <Steps>
   <Step title="Enter miles driven">
     Type in the number of miles for a sourcing trip, supply run, or any other business-related drive.
   </Step>
   <Step title="Review the deduction">
-    The app multiplies your miles by the current IRS standard mileage rate ($0.67/mile) and adds the result to your expenses automatically.
+    The app multiplies your miles by the current IRS standard mileage rate ($0.67/mile) and adds the result to your expenses automatically under Gas & Travel.
   </Step>
 </Steps>
 
@@ -87,10 +87,10 @@ Sourcing trips are a deductible business expense. Log your miles in the Mileage 
 
 ### Tax Reserve Estimate
 
-Profit Hub sets aside a **25% tax reserve** based on your net profit and displays it as an estimate in the P&L summary. This is a planning figure — not tax advice — but it gives you a working number to keep in a separate account so a quarterly tax bill doesn't catch you off guard.
+Profit Hub sets aside a **25% tax reserve** based on your net profit and displays it as an estimate in the P&L summary. This percentage is configurable in your settings if your situation calls for a different figure. The reserve is a planning number — not tax advice — but it gives you a working estimate to keep in a separate account so a quarterly tax bill doesn't catch you off guard.
 
 <Warning>
-  The 25% tax reserve is an estimate. Your actual tax liability depends on your total income, deductions, business structure, and jurisdiction. Consult a tax professional for guidance specific to your situation.
+  The tax reserve is an estimate. Your actual tax liability depends on your total income, deductions, business structure, and jurisdiction. Consult a tax professional for guidance specific to your situation.
 </Warning>
 
 ### Monthly Breakdown
@@ -101,7 +101,7 @@ Scroll down in the P&L tab to see a month-by-month table of sales and profit. Us
 
 ## Charts: Visualizing Your Performance
 
-The Stats tab includes three charts to help you see patterns that raw numbers can hide.
+The Overview tab includes three charts to help you see patterns that raw numbers can hide.
 
 <CardGroup cols={1}>
   <Card title="Profit by Category" icon="chart-bar">

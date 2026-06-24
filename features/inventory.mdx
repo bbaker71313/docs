@@ -46,14 +46,14 @@ Every inventory record contains the following fields:
 |---|---|
 | **Name** | Your nickname for the item — specific enough to find it later (e.g., *Minolta X-700 35mm SLR Film Camera*) |
 | **SKU** | Auto-generated unique identifier based on category (see [SKU auto-generation](#sku-auto-generation)) |
-| **Category** | Item category — Electronics, Clothing, Shoes, Home & Garden, Collectibles, and more |
+| **Category** | Item category — Electronics, Clothing, Shoes, Home & Garden, Collectibles, Toys & Hobbies, Sporting Goods, Books, Automotive, Health & Beauty, Tools, Musical Instruments, Pet Supplies, Baby, Jewelry & Watches |
 | **Condition** | New, Like New, Good, Fair, or Poor |
 | **Status** | Where the item is in its lifecycle (see below) |
 | **Cost paid** | What you paid for the item — used to calculate profit |
 | **Selling price** | Your target eBay sell price |
-| **Platform** | eBay (additional platforms available on Hustle and Stack) |
+| **Platform** | eBay (default) |
 | **Notes** | Free-text field for condition details, measurements, or anything useful at listing time |
-| **Photos** | Up to 4 photos stored in the app |
+| **Photos** | Up to 4 photos stored on your device |
 
 ### Status values
 
@@ -97,7 +97,7 @@ Combine both filters to quickly find what you're looking for — for example, al
 
 ### Stale listing badge
 
-If an item stays in **Listed** status for longer than your configured **Max Days** threshold (default: 30 days), it receives a warning badge. This is your signal to reprice, relist, or consider donating. You can change the stale threshold in the **Settings** tab.
+If an item stays in **Listed** status for longer than your configured **Max Days** threshold (default: 60 days), it receives a warning badge. This is your signal to reprice, relist, or consider donating. You can change the stale threshold in the **Settings** tab.
 
 <Warning>
 Stale inventory ties up capital. When you see the stale badge, act on it — drop the price, bundle with another item, or cut it loose.
@@ -128,7 +128,7 @@ When an item sells on eBay, tap into its detail view and tap **Mark as Sold**. A
 
 ## Photos
 
-Each inventory item supports up to **4 photos**. Photos are stored directly in the app — no external account or cloud storage setup required.
+Each inventory item supports up to **4 photos**. Photos are stored directly on your device — no external cloud storage setup required.
 
 ### Adding photos
 
@@ -145,6 +145,10 @@ Clean, well-lit photos directly affect your eBay listing performance. Use the Ph
 ### Removing photos
 
 In the edit form, tap the **×** on any photo thumbnail to remove it. Deleting an item removes all its photos permanently.
+
+<Warning>
+Photos are stored on the device where you add them and **do not sync** to other devices. If you add photos on your phone, you will not see them if you log in on a tablet or the web app. Only item metadata (name, category, condition, cost, status, notes) syncs across devices.
+</Warning>
 
 ---
 
@@ -178,9 +182,9 @@ Deleted items are removed from your P&L history. If you no longer want to sell s
 <Note>
 **Free Scout tier** — up to **10 inventory items** at a time.
 
-**Hustle** ($19/mo) — up to **500 inventory items**.
+**Hustle** — up to **500 inventory items**.
 
-**Stack** ($49/mo) — **unlimited inventory items**.
+**Stack and Empire** — **unlimited inventory items**.
 
 If you hit the Scout limit, you'll be prompted to upgrade or archive sold items to free up space.
 </Note>
@@ -189,7 +193,11 @@ If you hit the Scout limit, you'll be prompted to upgrade or archive sold items 
 
 ## Cross-Device Sync
 
-Your inventory automatically syncs to your ScanForProfit account when you're logged in. Sign in on any device — phone, tablet, or web — and your items, statuses, and notes are all there. Item metadata syncs in real time; photos are stored locally on the device where they were added.
+Your inventory automatically syncs to your ScanForProfit account when you're logged in. Sign in on any device — phone, tablet, or web — and your items, statuses, and notes are all there.
+
+**What syncs:** item metadata — name, category, condition, cost, selling price, status, platform, and notes.
+
+**What does not sync:** photos. Photos are stored locally on the device where they were added. If you need photos on another device, add them again from that device.
 
 <Tip>
 Always log in before you head out to source. That way your inventory is up to date and any new items you add during the trip sync back to your account automatically.

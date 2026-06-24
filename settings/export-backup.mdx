@@ -14,7 +14,11 @@ The CSV export creates an eBay Seller Hub–compatible bulk listing file from yo
 
 ### Eligibility
 
-Only items with a status of **Unlisted** and an AI-generated listing are included in the export. If an item doesn't have a listing yet, generate one from the Listing Generator tab first.
+Items are included in the export when they meet all of the following conditions:
+
+- Status is **Unlisted**
+- Added within the selected time window
+- Not already exported in a previous CSV run
 
 ### Export Steps
 
@@ -35,7 +39,7 @@ Only items with a status of **Unlisted** and an AI-generated listing are include
 
 ### What's in the CSV
 
-The file uses eBay's Seller Hub bulk draft format and includes the following columns for each item:
+The file uses eBay's Seller Hub bulk draft format (`Version=0.0.2`) and includes the following columns for each item:
 
 | Column | Description |
 |---|---|
@@ -43,10 +47,26 @@ The file uses eBay's Seller Hub bulk draft format and includes the following col
 | **Custom label (SKU)** | Your ScanForProfit SKU (e.g. `ELEC-00042`) |
 | **Category ID** | eBay leaf category ID mapped from your item category |
 | **Title** | AI-generated listing title (max 80 characters) |
+| **UPC** | Universal Product Code, if available for the item |
 | **Price** | Your sell price as entered in inventory |
 | **Quantity** | Always `1` |
-| **Condition ID** | eBay condition code mapped from your item condition |
+| **Item photo URL** | URL to the item photo, if available |
+| **Condition ID** | eBay condition code mapped from your item condition (see table below) |
 | **Description** | AI-generated listing description |
+
+### Condition ID Mapping
+
+ScanForProfit automatically translates your item condition into the eBay condition code the CSV requires:
+
+| Your condition | eBay Condition ID |
+|---|---|
+| New | `NEW` |
+| Like New | `NEW_OTHER` |
+| Open Box | `NEW_OTHER` |
+| Good | `USED` |
+| Used | `USED` |
+| Fair | `USED` |
+| Poor | `FOR_PARTS_OR_NOT_WORKING` |
 
 ### Uploading to eBay Seller Hub
 
@@ -71,6 +91,19 @@ The file uses eBay's Seller Hub bulk draft format and includes the following col
 
 The JSON backup captures a complete snapshot of your ScanForProfit account: all inventory items, expenses, scan history, and your current settings.
 
+### What the Backup Includes
+
+| Included | Not included |
+|---|---|
+| All inventory items and their data | Photo files (these stay on your device) |
+| All expenses | |
+| Full scan history | |
+| Your current settings | |
+
+<Note>
+  The backup includes **photo metadata** (file references, item names, SKUs, categories, notes) but not the photo files themselves. Photos remain stored on your device. If you restore on a new device, your item data will be fully restored but photos will not carry over.
+</Note>
+
 ### Download a Backup
 
 <Steps>
@@ -82,10 +115,6 @@ The JSON backup captures a complete snapshot of your ScanForProfit account: all 
   </Step>
 </Steps>
 
-<Note>
-  The backup includes **photo metadata** (item names, SKUs, categories, notes) but not the photo files themselves. Photos remain stored on your device. If you restore on a new device, item data will be restored but photos will not carry over.
-</Note>
-
 ### Restore from Backup
 
 <Steps>
@@ -93,7 +122,7 @@ The JSON backup captures a complete snapshot of your ScanForProfit account: all 
     From the **Stats** tab, tap **Subscription & Account**, then tap **Import / Restore**.
   </Step>
   <Step title="Select your backup file">
-    Tap **Choose file** and navigate to your `.json` backup. Select it.
+    Tap **Import** and navigate to your `.json` backup file. Select it.
   </Step>
   <Step title="Review the preview">
     The app shows you how many items, expenses, and scan entries it found in the file. Confirm the numbers look right.

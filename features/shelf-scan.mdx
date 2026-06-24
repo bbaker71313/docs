@@ -1,5 +1,5 @@
 ---
-title: "Shelf Scan: Triage an Entire Shelf in Seconds"
+title: "Shelf Scan: Triage an Entire Store Shelf in Seconds"
 sidebarTitle: "Shelf Scan"
 description: "Photograph a whole shelf and get every visible item ranked by profit potential — HOT, LIST, and SKIP — so you never walk past a good find again."
 ---
@@ -35,13 +35,13 @@ Shelf Scan lets you photograph an entire shelf at once and get every visible ite
 Shelf Scan organizes every identified item into three groups, sorted by profit potential from highest to lowest within each group.
 
 <CardGroup cols={3}>
-  <Card title="🔥 HOT" icon="fire">
+  <Card title="🔥 HOT" icon="fire" href="/settings/decision-logic">
     Strong ROI, fast-moving, profit well above your minimum threshold. These are your priority grabs — don't leave without them.
   </Card>
-  <Card title="✅ LIST" icon="check">
+  <Card title="✅ LIST" icon="check" href="/settings/decision-logic">
     Clears your minimum profit and sells within your max days. Solid buys worth picking up if you have room.
   </Card>
-  <Card title="⛔ SKIP" icon="x">
+  <Card title="⛔ SKIP" icon="x" href="/settings/decision-logic">
     Below your profit floor, too slow to sell, or demand too low. Confirmed: leave it.
   </Card>
 </CardGroup>
@@ -54,7 +54,7 @@ Each item in the results shows:
 - **Demand Level** — LOW, MEDIUM, HIGH, or VERY HIGH based on sell-through data
 
 <Note>
-  The AI only includes items it can identify with at least moderate confidence. If an item is out of frame, partially hidden, or too blurry to read, it won't appear in your results. This is by design — a missing item is better than a wrong price.
+  The AI only includes items it can identify with at least 40% confidence. If an item is out of frame, partially hidden, or too blurry to read, it won't appear in your results. This is by design — a missing item is better than a wrong price.
 </Note>
 
 ---
@@ -106,13 +106,13 @@ The quality of your shelf photo directly affects how many items get identified a
 Both tools pull from the same AI and the same eBay sold comps — the difference is speed versus depth.
 
 <CardGroup cols={2}>
-  <Card title="Use Shelf Scan when…" icon="shelves">
+  <Card title="Use Shelf Scan when…" icon="shelves" href="/features/shelf-scan">
     - You're walking an estate sale or flea market and need to triage fast
     - You're at a thrift store facing a full shelf of mixed items
     - You want to make sure you don't walk past something valuable
     - You have limited time and a lot of ground to cover
   </Card>
-  <Card title="Use Single Item Scan when…" icon="magnifying-glass">
+  <Card title="Use Single Item Scan when…" icon="magnifying-glass" href="/features/profit-scanner">
     - You've already spotted something interesting and want the full breakdown
     - You need search keywords, listing tips, or risk flags
     - The item is in a case or not on an open shelf

@@ -1,5 +1,5 @@
 ---
-title: "Profit Scanner: AI-Powered Single Item Scans"
+title: "Profit Scanner: Instant AI Scans with Real eBay Data"
 sidebarTitle: "Profit Scanner"
 description: "Point your camera at any item — or type a description — and get an instant HOT, LIST, or SKIP decision with real profit math after every eBay fee."
 ---
@@ -62,13 +62,13 @@ Every scan returns one of three verdicts. Here's what each one means:
 </Note>
 
 <CardGroup cols={3}>
-  <Card title="🔥 HOT" icon="fire">
+  <Card title="🔥 HOT" icon="fire" href="/settings/decision-logic">
     Strong ROI, fast seller, profit well above your target. Grab it.
   </Card>
-  <Card title="✅ LIST" icon="check">
+  <Card title="✅ LIST" icon="check" href="/settings/decision-logic">
     Meets your profit floor and sells in a reasonable time. Solid buy.
   </Card>
-  <Card title="⛔ SKIP" icon="x">
+  <Card title="⛔ SKIP" icon="x" href="/settings/decision-logic">
     Doesn't clear your profit minimum, moves too slowly, or demand is too low.
   </Card>
 </CardGroup>
@@ -88,31 +88,31 @@ Your verdict can be tightened or loosened by changing your **Style** in Settings
 Below the verdict you'll see a full profit breakdown. Here's what each number represents in plain English:
 
 <CardGroup cols={2}>
-  <Card title="Avg Sold Price" icon="tag">
+  <Card title="Avg Sold Price" icon="tag" href="/settings/fee-configuration">
     The median price this item has actually sold for on eBay recently — not what sellers are asking, not retail price. Real sold comps.
   </Card>
-  <Card title="Price Range" icon="chart-bar">
+  <Card title="Price Range" icon="chart-bar" href="/settings/fee-configuration">
     The low-to-high spread of recent sales (roughly the 20th–80th percentile). Tells you how consistent the market is and what to realistically expect.
   </Card>
-  <Card title="Sell-Through Rate" icon="percent">
+  <Card title="Sell-Through Rate" icon="percent" href="/settings/decision-logic">
     The percentage of listings for this item that actually result in a sale. A 70% sell-through means 7 out of 10 listings sell. Below ~30% means slow-moving stock.
   </Card>
-  <Card title="Avg Days to Sell" icon="calendar">
+  <Card title="Avg Days to Sell" icon="calendar" href="/settings/decision-logic">
     How long it typically takes to go from listed to sold. Faster turnover means less capital tied up.
   </Card>
-  <Card title="Demand Level" icon="signal">
+  <Card title="Demand Level" icon="signal" href="/settings/decision-logic">
     A quick read on overall demand: LOW, MEDIUM, HIGH, or VERY HIGH — based on sell-through rate and listing velocity.
   </Card>
-  <Card title="Estimated Profit" icon="dollar-sign">
-    Your take-home after everything. Calculated as: **avg sold price − your cost − eBay fees − packaging − shipping.**
+  <Card title="Estimated Profit" icon="dollar-sign" href="/settings/fee-configuration">
+    Your take-home after everything. Calculated as: **avg sold price − your cost − eBay fee − packaging − shipping.**
   </Card>
 </CardGroup>
 
 **The profit formula in plain English:**
 
-> **Profit = Avg Sold Price − What You Pay − eBay Fee % − Packaging Cost − Shipping Cost**
+> **Profit = Avg Sold Price − What You Pay − eBay Fee (a % of the sale price) − Packaging Cost − Shipping Cost (if you offer free shipping)**
 
-All of those inputs come from your personal Settings. The eBay fee is your actual rate (not a generic estimate), and packaging and shipping costs are what you told the app you typically spend. Change any of those in Settings and every scan recalculates automatically.
+All of those inputs come from your personal Settings. The eBay fee is applied as a percentage of the average sold price — not a flat dollar amount. Packaging and shipping costs are what you told the app you typically spend. If you charge buyers for shipping, shipping cost is not deducted. Change any of those in Settings and every scan recalculates automatically.
 
 ---
 
@@ -136,7 +136,7 @@ Hit **Confirm** and the item lands in your Inventory with everything already fil
 
 The bottom of the Scout tab shows your last five scans from today. At a glance you can see what you scanned, what the verdict was, and what your total estimated profit from today's buys looks like.
 
-Scans are stored locally on your device. History resets each day.
+Scans are stored locally on your device. The history display resets each day.
 
 ---
 
@@ -165,5 +165,5 @@ Getting a clean, detailed photo makes a real difference in identification accura
 ## Free tier scan limits
 
 <Note>
-  The free Scout tier includes **25 AI scans per month**. When you approach the limit, a banner at the top of the app shows how many scans you have left. Once you hit 25, scanning is paused until the next billing cycle — or you can upgrade to the Hustle plan for unlimited scans.
+  The free Scout tier includes **25 AI scans per month**. Your scan count resets at the start of each new monthly period. When you approach the limit, a banner at the top of the app shows how many scans you have left. Once you hit 25, scanning is paused until the next monthly reset — or you can upgrade to the Hustle plan for unlimited scans.
 </Note>
