@@ -1,0 +1,347 @@
+---
+title: "Troubleshooting Common Issues — ScanForProfit"
+sidebarTitle: "Troubleshooting"
+description: "Step-by-step fixes for login problems, scan errors, missing photos, listing issues, and profit math that doesn't look right."
+---
+
+Most issues in ScanForProfit have a quick fix. Work through the steps below for your issue — if none of them resolve it, contact [support@scanforprofit.com](mailto:support@scanforprofit.com) and we'll take a look.
+
+---
+
+## Account & Login
+
+<AccordionGroup>
+  <Accordion title="I can't log in">
+    Start with the most common causes:
+
+    <Steps>
+      <Step title="Check your password">
+        Make sure you're using the correct password. Passwords are case-sensitive. If you're not sure, try typing it into a text field first to confirm there are no typos.
+      </Step>
+      <Step title="Check that your email is verified">
+        You must verify your email address before you can log in. If you signed up recently and didn't click the confirmation link, check your inbox (and spam/junk folder) for a verification email from ScanForProfit.
+      </Step>
+      <Step title="Confirm you're using the right email">
+        Make sure you're entering the exact email address you used when you created your account.
+      </Step>
+      <Step title="Reset your password">
+        If you've forgotten your password, email [support@scanforprofit.com](mailto:support@scanforprofit.com) with your username and request a password reset.
+      </Step>
+    </Steps>
+
+    <Note>
+      ScanForProfit uses email and password login only — there are no magic links or one-click sign-in emails.
+    </Note>
+  </Accordion>
+
+  <Accordion title="My verification email isn't arriving">
+    <Steps>
+      <Step title="Check spam and junk folders">
+        Verification emails frequently land in spam. Search your inbox for "ScanForProfit" or check your spam/junk folder directly.
+      </Step>
+      <Step title="Wait a few minutes">
+        Email delivery can take a few minutes. If you just signed up, give it 5–10 minutes before assuming something went wrong.
+      </Step>
+      <Step title="Confirm the correct email address">
+        Make sure you signed up with the email address you're currently checking. If you mistyped your email during registration, the verification won't arrive.
+      </Step>
+      <Step title="Contact support">
+        If you've waited 10 minutes and still don't see it, email [support@scanforprofit.com](mailto:support@scanforprofit.com) with your account email address. We'll verify your account manually.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="I was logged out unexpectedly">
+    Sessions can expire after a period of inactivity, or if your browser cleared cookies or cached data. This is normal behavior.
+
+    <Steps>
+      <Step title="Log back in">
+        Go to [scanforprofit.com/app.html](https://scanforprofit.com/app.html) and sign in with your email and password.
+      </Step>
+      <Step title="Check browser settings">
+        If you're using a private/incognito window, cookies are cleared when the window closes. Use a standard browser window for a persistent session.
+      </Step>
+      <Step title="Check for browser extensions">
+        Some privacy or cookie-clearing extensions can end sessions. Try logging in from a browser without extensions if this keeps happening.
+      </Step>
+    </Steps>
+
+    Your inventory data and scans are stored server-side and will be waiting for you when you log back in.
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Scanning Issues
+
+<AccordionGroup>
+  <Accordion title="My scan results seem inaccurate">
+    Scan accuracy depends on a few factors — photo quality, item specificity, and your settings. Work through these checks:
+
+    <Steps>
+      <Step title="Review your settings">
+        The HOT/LIST/SKIP decision is based on your configured eBay fee rate, target ROI, and minimum profit threshold. If these don't reflect how you actually flip items, the results won't match your expectations. Open **Settings** and confirm your numbers are accurate.
+      </Step>
+      <Step title="Add more item detail">
+        If you typed a description instead of uploading a photo, try being more specific — include the brand, model, size, and condition. The AI produces better results with more detail.
+      </Step>
+      <Step title="Try a better photo">
+        If you're scanning by photo, make sure the item is well-lit and clearly visible. See the photo scanning tips in the next section.
+      </Step>
+      <Step title="Verify high-value results manually">
+        For items over $50, always double-check by searching eBay sold listings yourself. The AI is your first filter, not your final word.
+      </Step>
+    </Steps>
+
+    <Warning>
+      AI results are based on historical eBay sold listing data and can vary. Use them to narrow your decision quickly, but always verify items with significant purchase risk.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Scan says 'Limit reached' but I just signed up">
+    If you're on the free Scout plan, you have 25 scans per month. Your count starts from the day you sign up — it doesn't reset immediately.
+
+    <Steps>
+      <Step title="Check your plan">
+        Look at the tier banner at the top of the app. It shows your current scan count and your monthly limit.
+      </Step>
+      <Step title="Wait for your reset date">
+        Your scan count resets monthly on the same date you created your account. The app shows how many days remain until your next reset.
+      </Step>
+      <Step title="Upgrade if you need more scans now">
+        If you've hit 25 scans before your reset date and need to keep sourcing, the upgrade prompt that appears when you hit the limit will take you to the plan comparison page. Hustle ($19/mo) includes unlimited scans.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="My photo scan isn't working or the item isn't being recognized">
+    Poor photo quality is the most common cause of failed or inaccurate photo scans.
+
+    <Steps>
+      <Step title="Improve your lighting">
+        Take the photo in good natural light or under bright overhead lighting. Dark, blurry, or overexposed photos make it harder for the AI to identify the item correctly.
+      </Step>
+      <Step title="Fill the frame with the item">
+        Get close enough that the item fills most of the photo. Don't include too much background clutter, especially for single-item scans.
+      </Step>
+      <Step title="Capture key identifying details">
+        For branded items, make sure the brand name, logo, or model number is visible. For collectibles or vintage items, show any markings, stamps, or labels.
+      </Step>
+      <Step title="Switch to text input">
+        If the photo still isn't working, tap the text input option and type the item description manually. You'll still get a full scan result.
+      </Step>
+    </Steps>
+
+    <Tip>
+      For shelf scans, step back far enough that the entire shelf fits in frame without being cut off at the edges.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="My scan is slow or timing out">
+    Scan processing typically takes under 10 seconds. If it's taking longer:
+
+    <Steps>
+      <Step title="Check your internet connection">
+        Scans require an active internet connection. If your signal is weak (common in large thrift stores), try moving closer to the entrance or switching to Wi-Fi if available.
+      </Step>
+      <Step title="Reduce photo file size">
+        Very large photo files can slow processing. If your phone is set to shoot at maximum resolution, consider lowering the camera resolution in your phone settings.
+      </Step>
+      <Step title="Refresh and try again">
+        If the scan appears stuck, refresh the page and re-submit. Your scan count won't be charged for a failed scan.
+      </Step>
+      <Step title="Try again in a few minutes">
+        Occasional slowdowns can happen during high-traffic periods. Wait a minute and try again.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Inventory Issues
+
+<AccordionGroup>
+  <Accordion title="I can't add more inventory items">
+    You've hit the item limit for your current plan:
+
+    | Plan | Inventory Limit |
+    |------|----------------|
+    | Scout (free) | 10 items |
+    | Hustle | 500 items |
+    | Stack | Unlimited |
+    | Empire | Unlimited |
+
+    You have two options:
+
+    <Steps>
+      <Step title="Archive items you've already sold">
+        Open items in your inventory that are marked **Sold**, then archive them. Archived items don't count against your limit but their data stays in your records.
+      </Step>
+      <Step title="Upgrade your plan">
+        If you're regularly hitting the limit, upgrade to Hustle or Stack from the **Settings** page.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="Photos are missing on my other device">
+    This is expected behavior — photos are stored in your browser on the specific device where you took them. They don't sync to the cloud or transfer to other devices.
+
+    When you log in on a different device, your item's text data (title, cost, price, status, notes) will be there, but the photos won't be.
+
+    <Note>
+      To keep photos accessible across devices, save them to your phone's camera roll or photo library. You can then re-attach them to the item from any device.
+    </Note>
+
+    If you're regularly switching devices, consider using one primary device for photography and the other for reviewing inventory data.
+  </Accordion>
+
+  <Accordion title="My item details didn't save">
+    <Steps>
+      <Step title="Check your internet connection">
+        Item data syncs to your account in real time. If you were offline when you made changes, the update may not have gone through. Confirm you have a connection and try saving again.
+      </Step>
+      <Step title="Confirm you tapped Save">
+        Some fields auto-save; others require you to tap a **Save** button. Make sure the save action completed before navigating away.
+      </Step>
+      <Step title="Refresh and check">
+        Pull to refresh the inventory list, then re-open the item to see if your changes are there.
+      </Step>
+      <Step title="Re-enter the data">
+        If the data is still missing, re-enter it. If this happens repeatedly, contact [support@scanforprofit.com](mailto:support@scanforprofit.com) with your account email and a description of the item and fields affected.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Listings & Export
+
+<AccordionGroup>
+  <Accordion title="My generated listing title is too generic">
+    Generic titles usually mean the AI didn't have enough to work with. Give it more detail:
+
+    <Steps>
+      <Step title="Add specific item information">
+        Include the brand name, product name, model number, size, color, and condition in your item details before generating the listing.
+      </Step>
+      <Step title="Note any key features or flaws">
+        Unique features (vintage, rare colorway, limited edition) and any condition issues (minor scratch, missing part) both help the AI write a more specific, accurate title.
+      </Step>
+      <Step title="Regenerate the listing">
+        After adding more detail, regenerate the listing. The AI uses whatever information is in the item record at the time of generation.
+      </Step>
+      <Step title="Edit the title manually">
+        If the title is close but not quite right, edit it directly in the listing editor before exporting.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="My CSV file isn't being accepted by eBay Seller Hub">
+    eBay Seller Hub has specific formatting requirements for CSV bulk uploads. Common issues:
+
+    <Steps>
+      <Step title="Don't modify the CSV in Excel before uploading">
+        Opening and re-saving a CSV in Excel can corrupt formatting, change date formats, or strip leading zeros from item numbers. Upload the file directly from ScanForProfit without editing it.
+      </Step>
+      <Step title="Check for missing required fields">
+        eBay requires certain fields (title, category, condition, price, quantity) to be present. Make sure those fields are filled in for every item you're exporting.
+      </Step>
+      <Step title="Use a plain text editor if you need to inspect the file">
+        If you need to check the file contents, open it in a plain text editor (Notepad on Windows, TextEdit on Mac in plain text mode) rather than a spreadsheet app.
+      </Step>
+      <Step title="Contact support">
+        If the file continues to be rejected, email [support@scanforprofit.com](mailto:support@scanforprofit.com) with the error message eBay is showing and we'll look at the export format.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="My listing content isn't showing after saving">
+    <Steps>
+      <Step title="Refresh the Listing tab">
+        Pull to refresh or reload the page. The listing may have saved correctly but the display hasn't updated yet.
+      </Step>
+      <Step title="Check your internet connection">
+        If you saved while offline, the listing may not have synced. Reconnect and try saving again.
+      </Step>
+      <Step title="Re-open the item">
+        Navigate away from the listing and back to it. Sometimes the display needs a fresh load to show updated content.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+## Profit Math
+
+<AccordionGroup>
+  <Accordion title="My profit numbers look wrong">
+    Profit calculations use your configured settings — if those are off, all your profit numbers will be off.
+
+    <Steps>
+      <Step title="Check your eBay fee rate">
+        Go to **Settings** and confirm your eBay fee percentage matches your actual rate. eBay fees typically range from 8–18% depending on your seller level, store subscription, and item category. The default is 13%.
+      </Step>
+      <Step title="Check your other fee settings">
+        Review your shipping cost assumptions, tax reserve percentage, and any other expenses you've configured. Each of these affects the profit calculation.
+      </Step>
+      <Step title="Reset to defaults if needed">
+        If your settings are in an uncertain state, tap **Reset to Defaults** in Settings to restore the original values, then reconfigure from there.
+      </Step>
+      <Step title="Check cost and sale price on the item">
+        Make sure the cost and actual or expected sale price are entered correctly on the inventory item itself.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Your eBay fee rate is the most impactful setting in profit calculations. Even a few percentage points difference changes the math significantly on higher-priced items.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="HOT/SKIP decisions don't match my expectations">
+    The HOT/LIST/SKIP decision is based entirely on your configured settings — not a one-size-fits-all threshold. The AI evaluates each item against *your* target ROI, *your* eBay fee rate, and *your* minimum profit floor.
+
+    <Steps>
+      <Step title="Review your target ROI setting">
+        If your ROI target is set very high, more items will get a SKIP even if they're profitable. Lower the threshold if you're seeing too many SKIPs on items you'd normally flip.
+      </Step>
+      <Step title="Check your style mode">
+        ScanForProfit includes a sourcing style setting that influences how aggressively it recommends items. A conservative style setting will produce more SKIP results than an aggressive one.
+      </Step>
+      <Step title="Verify your fee rate is accurate">
+        An inflated eBay fee rate deflates projected profit, which can push borderline items from LIST to SKIP.
+      </Step>
+      <Step title="Tune incrementally">
+        Make one setting change at a time and run a few test scans before adjusting further. This makes it easier to understand which setting is driving the change.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="My P&L shows $0 revenue">
+    The P&L dashboard only counts revenue from items you've explicitly marked as **Sold** with an actual sale price entered.
+
+    <Steps>
+      <Step title="Mark sold items as Sold">
+        Open each item you've sold in the Inventory tab and update its status to **Sold**.
+      </Step>
+      <Step title="Enter the actual sale price">
+        When marking an item sold, enter the price you actually received — not the listed price. The P&L uses the sale price to calculate real revenue and profit.
+      </Step>
+      <Step title="Check the date range">
+        Make sure the P&L date filter covers the period when your sales occurred. If your filter is set to the current month and your sales were last month, they won't show.
+      </Step>
+    </Steps>
+
+    <Note>
+      Listed price and sale price are tracked separately. The P&L reflects what you actually made, not what you asked for.
+    </Note>
+  </Accordion>
+</AccordionGroup>
+
+---
+
+<Note>
+  **Still stuck?** Email [support@scanforprofit.com](mailto:support@scanforprofit.com). Include your account email address and a clear description of the issue — what you were doing, what you expected to happen, and what happened instead. Screenshots help. We'll get back to you as quickly as we can.
+</Note>

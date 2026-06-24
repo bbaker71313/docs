@@ -1,0 +1,127 @@
+---
+title: "CSV Export and JSON Backup / Restore"
+sidebarTitle: "Export & Backup"
+description: "Export draft listings to eBay Seller Hub as a CSV, back up your full inventory and settings as JSON, and restore or import data at any time."
+---
+
+ScanForProfit gives you two ways to get your data out of the app. The **CSV export** generates a file you upload directly to eBay Seller Hub to create draft listings in bulk. The **JSON backup** saves everything — inventory, expenses, scan history, and settings — to a single file you can store anywhere and restore from at any time.
+
+---
+
+## CSV Export: Send Draft Listings to eBay
+
+The CSV export creates an eBay Seller Hub–compatible bulk listing file from your ready-to-list inventory. Instead of entering each listing manually in eBay, you upload one file and all your drafts appear at once.
+
+### Eligibility
+
+Only items with a status of **Unlisted** and an AI-generated listing are included in the export. If an item doesn't have a listing yet, generate one from the Listing Generator tab first.
+
+### Export Steps
+
+<Steps>
+  <Step title="Open the CSV Export screen">
+    From the **Listing** tab, tap **Export to eBay CSV**.
+  </Step>
+  <Step title="Choose your time window">
+    Select the window of items to include: **Last 24 hours**, **Last 48 hours**, or **Last 7 days**. This filters by when you added the item to inventory, not when you generated the listing.
+  </Step>
+  <Step title="Review the preview">
+    The app shows you a preview of every item that will be included. Confirm the titles, prices, and SKUs look correct.
+  </Step>
+  <Step title="Download the CSV">
+    Tap **Download CSV**. On mobile, the share sheet opens and you can save the file to Files, Google Drive, or email it to yourself. On the web app, the file downloads directly to your device.
+  </Step>
+</Steps>
+
+### What's in the CSV
+
+The file uses eBay's Seller Hub bulk draft format and includes the following columns for each item:
+
+| Column | Description |
+|---|---|
+| **Action** | Always `Add` — creates a new draft listing |
+| **Custom label (SKU)** | Your ScanForProfit SKU (e.g. `ELEC-00042`) |
+| **Category ID** | eBay leaf category ID mapped from your item category |
+| **Title** | AI-generated listing title (max 80 characters) |
+| **Price** | Your sell price as entered in inventory |
+| **Quantity** | Always `1` |
+| **Condition ID** | eBay condition code mapped from your item condition |
+| **Description** | AI-generated listing description |
+
+### Uploading to eBay Seller Hub
+
+<Steps>
+  <Step title="Log into eBay Seller Hub">
+    Go to [ebay.com/sh/lst](https://www.ebay.com/sh/lst) and sign in.
+  </Step>
+  <Step title="Go to Listings → Import">
+    From the **Listings** menu, select **Import listings**.
+  </Step>
+  <Step title="Upload your CSV file">
+    Click **Upload file**, select the CSV you downloaded from ScanForProfit, and click **Submit**.
+  </Step>
+  <Step title="Review and activate">
+    eBay imports the file as draft listings. Review each draft, make any final edits, and click **List item** on each one — or select all and use the bulk activate option.
+  </Step>
+</Steps>
+
+---
+
+## JSON Backup: Save Everything
+
+The JSON backup captures a complete snapshot of your ScanForProfit account: all inventory items, expenses, scan history, and your current settings.
+
+### Download a Backup
+
+<Steps>
+  <Step title="Open the Backup screen">
+    From the **Stats** tab, tap **Subscription & Account**, then tap **Download Backup**.
+  </Step>
+  <Step title="Save the file">
+    The app generates a `.json` file named with today's date (e.g., `scanforprofit-backup-2026-06-01.json`). Save it to iCloud, Google Drive, email it to yourself, or store it anywhere you keep important files.
+  </Step>
+</Steps>
+
+<Note>
+  The backup includes **photo metadata** (item names, SKUs, categories, notes) but not the photo files themselves. Photos remain stored on your device. If you restore on a new device, item data will be restored but photos will not carry over.
+</Note>
+
+### Restore from Backup
+
+<Steps>
+  <Step title="Open the Import screen">
+    From the **Stats** tab, tap **Subscription & Account**, then tap **Import / Restore**.
+  </Step>
+  <Step title="Select your backup file">
+    Tap **Choose file** and navigate to your `.json` backup. Select it.
+  </Step>
+  <Step title="Review the preview">
+    The app shows you how many items, expenses, and scan entries it found in the file. Confirm the numbers look right.
+  </Step>
+  <Step title="Confirm the restore">
+    Tap **Import**. Existing data is merged with the backup — duplicate SKUs are skipped to avoid overwriting items you've updated since the backup was made.
+  </Step>
+</Steps>
+
+---
+
+## CSV Import: Migrate from a Spreadsheet
+
+If you've been tracking inventory in a spreadsheet, you can import it into ScanForProfit as a CSV file without re-entering every item manually.
+
+Your CSV needs a `nickname` column at minimum. The following column names are recognized automatically:
+
+| Column name | Maps to |
+|---|---|
+| `nickname` | Item name (required) |
+| `cost` | Purchase price |
+| `sellPrice` | Target sell price |
+| `category` | Item category |
+| `condition` | Item condition |
+| `status` | Inventory status (Unlisted, Listed, Sold) |
+
+To import: go to **Stats → Import / Restore**, tap **Import CSV**, select your file, review the preview, and confirm.
+
+<Tip>
+  Back up your data before you do a major inventory cleanup or before clearing sold items. It takes ten seconds and means you always have a recoverable copy of your full history.
+</Tip>

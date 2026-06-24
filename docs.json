@@ -1,72 +1,71 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "ScanForProfit",
+  "theme": "luma",
+  "logo": {
+    "light": "https://media.brand.dev/c863ca52-9523-4593-9e2e-a82b560335af.svg",
+    "dark": "https://media.brand.dev/c863ca52-9523-4593-9e2e-a82b560335af.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://media.brand.dev/7ae851a2-2e7c-4229-bcc0-21c5f24fe0f0.svg",
+  "colors": {
+    "primary": "#78b552",
+    "light": "#856a2c",
+    "dark": "#0e0e0d"
+  },
+  "topbar": {
+    "style": "default"
+  },
   "navigation": {
-    "pages": [
+    "tabs": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/profit-scanner",
+              "features/shelf-scan",
+              "features/inventory",
+              "features/listing-generator",
+              "features/profit-hub",
+              "features/profit-compass"
+            ]
+          },
+          {
+            "group": "Settings & Math",
+            "pages": [
+              "settings/fee-configuration",
+              "settings/decision-logic",
+              "settings/export-backup"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "plans/overview",
+              "plans/upgrade"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "socials": {}
   }
 }

@@ -1,0 +1,196 @@
+---
+title: "Inventory Tracker: Manage Your Reseller Stock"
+sidebarTitle: "Inventory"
+description: "Track every item you source — cost, selling price, status, and photos — all in one place, synced across your devices."
+---
+
+The Inventory tracker is your central record for every item you source and sell. From the moment you tap **BUY** on a scan result, ScanForProfit creates an inventory record that follows the item through its entire lifecycle — from unlisted, to live on eBay, to sold. You can track cost paid, selling price, condition, photos, and notes on every item, and the live profit preview means you always know your margin before you list.
+
+## Adding Items
+
+There are two ways to get an item into your inventory.
+
+### From a scan result
+
+The fastest path is through the Scanner tab. When a scan comes back **BUY** or **HOT**, tap the **BUY** button on the result card. ScanForProfit pre-fills the item name, category, condition, estimated value, and any notes from the scan — you just review the details, set your cost, and confirm. The item lands in your inventory instantly, ready to list.
+
+### Manually
+
+To add an item without scanning, go to the **Inventory** tab and tap the **+** button. Fill in the form fields and tap **Save**.
+
+<Tip>
+Even when adding manually, you can use AI photo detection (see below) to auto-fill most fields from a single photo — no typing required.
+</Tip>
+
+---
+
+## AI Photo Detection
+
+When you're filling in the add or edit form, tap the camera icon to take a photo of your item. The AI analyzes every visible detail — brand logos, model numbers, labels, colors, condition — and automatically fills in:
+
+- **Name** — specific make, model, and variant
+- **Category** — matched to your inventory categories
+- **Condition** — based on visible wear and damage
+- **Estimated value** — a starting point for your sell price
+- **Notes** — condition observations and key selling points in one sentence
+
+You can edit any auto-filled field before saving. Think of it as a first draft — the AI does the heavy lifting and you make the final call.
+
+---
+
+## Item Fields
+
+Every inventory record contains the following fields:
+
+| Field | Description |
+|---|---|
+| **Name** | Your nickname for the item — specific enough to find it later (e.g., *Minolta X-700 35mm SLR Film Camera*) |
+| **SKU** | Auto-generated unique identifier based on category (see [SKU auto-generation](#sku-auto-generation)) |
+| **Category** | Item category — Electronics, Clothing, Shoes, Home & Garden, Collectibles, and more |
+| **Condition** | New, Like New, Good, Fair, or Poor |
+| **Status** | Where the item is in its lifecycle (see below) |
+| **Cost paid** | What you paid for the item — used to calculate profit |
+| **Selling price** | Your target eBay sell price |
+| **Platform** | eBay (additional platforms available on Hustle and Stack) |
+| **Notes** | Free-text field for condition details, measurements, or anything useful at listing time |
+| **Photos** | Up to 4 photos stored in the app |
+
+### Status values
+
+<CardGroup cols={2}>
+  <Card title="Unlisted" icon="box">
+    Item is in your inventory but not yet live on eBay.
+  </Card>
+  <Card title="Listed" icon="tag">
+    Item is actively listed and available for sale.
+  </Card>
+  <Card title="Sold" icon="circle-check">
+    Item has sold. Actual sale price recorded for P&L.
+  </Card>
+  <Card title="Archived" icon="archive">
+    Item is removed from active view but kept in your records.
+  </Card>
+</CardGroup>
+
+---
+
+## Live Profit Preview
+
+As you type in the **Cost paid** and **Selling price** fields, the profit preview updates in real time. It factors in your configured eBay fee percentage and packaging cost, so the number you see is your actual estimated take-home — not the gross sale price. You can adjust your fee settings in the **Settings** tab.
+
+---
+
+## Organizing Your Inventory
+
+### Search
+
+Tap the search bar at the top of the Inventory tab to search across all your items by **name** or **SKU**. Results update as you type.
+
+### Filter by status or category
+
+Use the filter controls to narrow your view:
+
+- **Status filter** — show only Unlisted, Listed, Sold, or Archived items
+- **Category filter** — show only items in a specific category (e.g., Electronics, Clothing)
+
+Combine both filters to quickly find what you're looking for — for example, all **Unlisted** items in **Electronics** that are ready to list this week.
+
+### Stale listing badge
+
+If an item stays in **Listed** status for longer than your configured **Max Days** threshold (default: 30 days), it receives a warning badge. This is your signal to reprice, relist, or consider donating. You can change the stale threshold in the **Settings** tab.
+
+<Warning>
+Stale inventory ties up capital. When you see the stale badge, act on it — drop the price, bundle with another item, or cut it loose.
+</Warning>
+
+---
+
+## Marking an Item Sold
+
+When an item sells on eBay, tap into its detail view and tap **Mark as Sold**. A modal appears where you enter the **actual sale price** — not the listing price, but what the buyer paid. ScanForProfit records the real sale price alongside your original cost to give you accurate profit figures in your P&L dashboard.
+
+<Steps>
+  <Step title="Open the item">
+    Tap the item in your inventory list to open the detail view.
+  </Step>
+  <Step title="Tap Mark as Sold">
+    Tap the **Mark as Sold** button at the bottom of the detail view.
+  </Step>
+  <Step title="Enter the actual sale price">
+    Type in the price the item sold for (this may differ from your listing price if the buyer made an offer).
+  </Step>
+  <Step title="Confirm">
+    Tap **Confirm**. The item status updates to **Sold** and your P&L dashboard reflects the real profit.
+  </Step>
+</Steps>
+
+---
+
+## Photos
+
+Each inventory item supports up to **4 photos**. Photos are stored directly in the app — no external account or cloud storage setup required.
+
+### Adding photos
+
+You can add photos in three ways:
+
+1. **During the add or edit form** — tap the photo area to take a new photo or choose from your library
+2. **AI photo detection** — take a photo of the item and let the AI fill in the details (counts as one of your 4 photos)
+3. **Photo Agent** — after saving an item, use the Photo Agent tool to enhance your photos with brightness, contrast, and background adjustments before you list
+
+<Tip>
+Clean, well-lit photos directly affect your eBay listing performance. Use the Photo Agent to brighten dark thrift-store photos before exporting your listing.
+</Tip>
+
+### Removing photos
+
+In the edit form, tap the **×** on any photo thumbnail to remove it. Deleting an item removes all its photos permanently.
+
+---
+
+## SKU Auto-Generation
+
+Every item gets a unique SKU the moment you save it. ScanForProfit generates the SKU automatically using the item's **category prefix** plus a **zero-padded 5-digit number** based on how many items you've added in that category.
+
+**Examples:**
+- `ELEC-00001` — first Electronics item
+- `CLO-00042` — 42nd Clothing item
+- `SHOE-00007` — 7th Shoes item
+
+You never need to manage SKUs manually. They appear in your inventory list, on CSV exports to eBay Seller Hub, and in search results.
+
+---
+
+## Editing and Deleting Items
+
+**To edit:** Open an item's detail view and tap **Edit**. All fields are editable, including photos, category, condition, and pricing.
+
+**To delete:** Tap **Delete** in the edit view. Confirm the deletion in the dialog that appears. Deleting an item permanently removes it and all associated photos — this cannot be undone.
+
+<Warning>
+Deleted items are removed from your P&L history. If you no longer want to sell something, consider using the **Archived** status instead of deleting it.
+</Warning>
+
+---
+
+## Item Limits by Plan
+
+<Note>
+**Free Scout tier** — up to **10 inventory items** at a time.
+
+**Hustle** ($19/mo) — up to **500 inventory items**.
+
+**Stack** ($49/mo) — **unlimited inventory items**.
+
+If you hit the Scout limit, you'll be prompted to upgrade or archive sold items to free up space.
+</Note>
+
+---
+
+## Cross-Device Sync
+
+Your inventory automatically syncs to your ScanForProfit account when you're logged in. Sign in on any device — phone, tablet, or web — and your items, statuses, and notes are all there. Item metadata syncs in real time; photos are stored locally on the device where they were added.
+
+<Tip>
+Always log in before you head out to source. That way your inventory is up to date and any new items you add during the trip sync back to your account automatically.
+</Tip>

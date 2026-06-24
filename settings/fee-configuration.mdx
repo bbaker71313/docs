@@ -1,0 +1,79 @@
+---
+title: "Configuring Your Profit Math Settings"
+sidebarTitle: "Fee Configuration"
+description: "Set your real eBay fee rate, packaging cost, and sourcing thresholds so every scan uses accurate profit math — not guesswork."
+---
+
+Every profit number ScanForProfit shows you is only as accurate as the settings behind it. If your eBay fee rate is off by a few percentage points or your packaging cost is wrong, every HOT / LIST / SKIP decision shifts with it. Spend two minutes dialing in your settings once and the app handles the math from there.
+
+## Opening Settings
+
+From the **Profit Scanner** tab, tap the **gear icon** in the top-right corner. This opens the Settings screen, where you can adjust every variable that feeds into your profit calculations.
+
+<Warning>
+  Your eBay fee percentage is the single most influential number in the app. Even a 2–3% error compounds across hundreds of scans. Set it to your actual rate before relying on any scan results.
+</Warning>
+
+## Configurable Settings
+
+| Setting | Default | What It Controls |
+|---|---|---|
+| **eBay Fee %** | 13% | The percentage eBay takes from your final sale price. Adjusted with a slider. |
+| **Packaging Cost** | $1.25 | Cost of boxes, bubble wrap, and tape per item shipped. |
+| **Minimum Profit** | $15.00 | The lowest acceptable dollar profit for a LIST decision. |
+| **Target ROI** | 200% | The return-on-investment percentage required for a HOT decision. |
+| **Max Days to Sell** | 60 days | Items projected to take longer than this will receive a SKIP. |
+| **Shipping** | Buyer pays | Toggle between "Buyer pays" (default) and "Free shipping" (you cover the cost). |
+| **Ship Cost** | $6.00 | Only used when you offer free shipping — added to the cost side of the formula. |
+| **Tax Reserve %** | 25% | Percentage of net profit set aside for taxes, shown in your P&L. |
+| **Mileage Rate** | $0.67/mile | IRS standard mileage rate for logging sourcing trips. Update this if the IRS rate changes. |
+
+## The Profit Formula
+
+ScanForProfit calculates your estimated profit for every scan using this formula:
+
+> **Profit = Average Sold Price − Your Cost − (Average Sold Price × eBay Fee %) − Packaging Cost − Ship Cost (if free shipping)**
+
+In plain English: start with what buyers actually pay for this item on eBay, subtract what you paid for it, subtract the eBay cut, subtract your packaging, and subtract shipping if you're offering free shipping. What remains is your projected profit.
+
+**ROI** is calculated as:
+
+> **ROI % = (Profit ÷ Your Cost) × 100**
+
+For example: you pay $10 for an item that sells for $40. After a 13% eBay fee ($5.20), $1.25 packaging, and $0 shipping (buyer pays), your profit is $23.55. Your ROI is 235% — which clears a 200% target and qualifies as **HOT**.
+
+## Style Modes
+
+Style mode scales all your decision thresholds up or down without requiring you to manually adjust each one. Select your style mode from the toggle on the Settings screen.
+
+<Tabs>
+  <Tab title="Conservative (1.3×)">
+    All thresholds become **30% stricter**. Profit, ROI, and sell-through requirements go up; maximum days-to-sell comes down. The app is harder to impress — only genuinely strong flips pass.
+
+    **Best for:** New resellers still learning what actually sells, or anyone who wants to avoid sitting on slow-moving inventory.
+
+    **Example:** With a $15 minimum profit, Conservative mode effectively requires $19.50+ before listing.
+  </Tab>
+  <Tab title="Balanced (1.0×)">
+    Thresholds are used exactly as configured. This is the default and the best starting point for most resellers.
+
+    **Best for:** Experienced resellers with a good feel for their categories.
+
+    **Example:** A $15 minimum profit means exactly $15 minimum profit.
+  </Tab>
+  <Tab title="Aggressive (0.75×)">
+    All thresholds become **25% looser**. Lower profit, ROI, and sell-through are acceptable; maximum days-to-sell extends. More items will qualify as LIST or HOT.
+
+    **Best for:** High-volume resellers with fast turnover, or when you're sourcing from a deeply discounted sale and want to capture more buys.
+
+    **Example:** With a $15 minimum profit, Aggressive mode allows items down to $11.25 to qualify as LIST.
+  </Tab>
+</Tabs>
+
+## Reset to Defaults
+
+Tap **Reset to Defaults** at the bottom of the Settings screen to restore every value to its original factory setting. This is useful if you've been experimenting and want a clean slate. Your inventory, scan history, and listings are not affected.
+
+<Tip>
+  To find your actual eBay fee rate, log into **eBay Seller Hub → Payments → Fee reports**. Your effective fee rate varies by category, seller level, and store subscription. Most resellers fall between 10% and 15%. If you have a basic eBay store, start at 12–13%. If you sell in low-fee categories like motors or real estate, adjust down accordingly.
+</Tip>

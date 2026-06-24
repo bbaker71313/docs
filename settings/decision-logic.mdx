@@ -1,0 +1,92 @@
+---
+title: "Understanding HOT / LIST / SKIP Decision Logic"
+sidebarTitle: "Decision Logic"
+description: "Learn exactly how ScanForProfit calculates HOT, LIST, and SKIP decisions — and how your settings and style mode shift every threshold."
+---
+
+Every scan ends with one of three verdicts: **HOT**, **LIST**, or **SKIP**. These aren't gut feelings — they're the output of a formula that runs your configured profit, ROI, sell-through, and days-to-sell numbers against what the AI found in the market. Understanding how the decisions work helps you trust the results and tune your settings to match how you source.
+
+<Note>
+  All decision thresholds use your configured settings — eBay fee %, minimum profit, target ROI, max days to sell, and style mode. Change any of those and every future scan recalculates accordingly.
+</Note>
+
+## What Each Decision Means
+
+- **HOT** — This is a strong flip. The item clears your profit floor and your ROI target by a wide margin, and it sells quickly. Buy it.
+- **LIST** — This is worth buying. Profit and sell-through are acceptable but not exceptional. Solid inventory addition.
+- **SKIP** — Pass on this one. The profit is too thin, the item sells too slowly, or the sell-through rate is too low to justify the capital.
+
+## How Decisions Are Calculated
+
+ScanForProfit applies rules in order: SKIP is checked first, then HOT, then LIST.
+
+| Decision | Conditions |
+|---|---|
+| **SKIP** | Profit is below your minimum threshold **OR** projected days to sell exceeds your maximum **OR** sell-through rate is below your minimum |
+| **HOT** | ROI meets or exceeds your target **AND** profit is 1.5× your minimum **AND** projected days to sell is half your maximum or less |
+| **LIST** | Everything that passes SKIP but doesn't qualify as HOT |
+
+If the item fails any one SKIP condition, it stops there — it never gets evaluated for HOT or LIST. If it passes SKIP and hits all three HOT conditions, it's HOT. Everything else in between is LIST.
+
+**Sell-through rate** is the percentage of eBay listings for this item that actually result in a sale (not just views). A 60% sell-through means 6 out of 10 sellers who list this item sell it.
+
+## How Style Mode Shifts the Thresholds
+
+Style mode applies a multiplier — called a **style bias** — to every threshold at once. You don't have to change each setting individually; the mode scales everything proportionally.
+
+| Style Mode | Bias Multiplier | Effect |
+|---|---|---|
+| Conservative | 1.3× | Thresholds tighten — harder to get HOT or LIST |
+| Balanced | 1.0× | Thresholds used exactly as configured |
+| Aggressive | 0.75× | Thresholds loosen — easier to get HOT or LIST |
+
+<Tabs>
+  <Tab title="Conservative (1.3×)">
+    Conservative mode multiplies your profit floor and sell-through minimum by 1.3, and divides your max days threshold by 1.3. This means:
+
+    - Minimum profit of $15 becomes effectively **$19.50**
+    - Max days of 60 becomes effectively **46 days**
+    - HOT requires profit of $15 × 1.5 × 1.3 = **$29.25+**
+
+    **When to use it:** When you're new to reselling, working a category you don't know well, or coming off a stretch of slow-selling inventory.
+  </Tab>
+  <Tab title="Balanced (1.0×)">
+    Balanced mode uses your settings exactly as entered. No scaling applied.
+
+    - Minimum profit of $15 = **$15**
+    - Max days of 60 = **60 days**
+    - HOT requires profit of $15 × 1.5 = **$22.50+**
+
+    **When to use it:** This is the right mode for most resellers, most of the time.
+  </Tab>
+  <Tab title="Aggressive (0.75×)">
+    Aggressive mode multiplies your profit floor and sell-through minimum by 0.75, and divides your max days threshold by 0.75. This means:
+
+    - Minimum profit of $15 becomes effectively **$11.25**
+    - Max days of 60 becomes effectively **80 days**
+    - HOT requires profit of $15 × 1.5 × 0.75 = **$16.88+**
+
+    **When to use it:** High-volume sourcing where you want to move fast and capture more buys, or when you're at a deeply discounted sale with low acquisition costs.
+  </Tab>
+</Tabs>
+
+## Examples: Same Item, Different Settings
+
+Here's how the same item scans differently based on your configuration.
+
+**Item:** Vintage 35mm camera — your cost: $12, AI found avg sold price: $58
+
+*Profit calculation: $58 − $12 − ($58 × 13%) − $1.25 = $37.21. ROI = ($37.21 ÷ $12) × 100 = 310%.*
+
+| Configuration | Minimum Profit | Target ROI | Max Days | Decision |
+|---|---|---|---|---|
+| Balanced defaults | $15 | 200% | 60 days | **HOT** — profit $37.21 ≥ $22.50, ROI 310% ≥ 200%, days ≤ 30 |
+| Conservative | $15 | 200% | 60 days | **HOT** — profit $37.21 ≥ $29.25, ROI 310% ≥ 200%, days ≤ 23 |
+| Min Profit raised to $40 | $40 | 200% | 60 days | **SKIP** — profit $37.21 < $40 floor |
+| Max Days lowered to 20 (item est. 35 days) | $15 | 200% | 20 days | **SKIP** — projected days 35 > 20 |
+
+Changing a single setting can flip a verdict. This is why your fee and threshold configuration directly determines how many items you buy and what condition they're in when they arrive home.
+
+<Tip>
+  Start with **Balanced** mode and your real eBay fee rate. Run a sourcing trip, then review your scan results. If everything is coming back HOT, tighten toward Conservative. If you're SKIPping items you later wish you'd bought, loosen toward Aggressive or raise your Max Days setting.
+</Tip>
