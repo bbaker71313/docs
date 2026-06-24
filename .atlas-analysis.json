@@ -1,0 +1,83 @@
+{
+  "projectType": "saas",
+  "projectName": "ScanForProfit",
+  "projectDescription": "AI-powered sourcing and profit-tracking app for eBay resellers — photograph any item or full shelf to get instant HOT/LIST/SKIP decisions with real profit math, then manage inventory, generate listings, and track P&L from one app.",
+  "theme": "luma",
+  "primaryColor": "#00e676",
+  "lightColor": "#d4a843",
+  "darkColor": "#0a0a0a",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/profit-scanner",
+              "features/shelf-scan",
+              "features/inventory",
+              "features/listing-generator",
+              "features/profit-hub",
+              "features/profit-compass"
+            ]
+          },
+          {
+            "group": "Settings & Math",
+            "pages": [
+              "settings/fee-configuration",
+              "settings/decision-logic",
+              "settings/export-backup"
+            ]
+          },
+          {
+            "group": "Plans & Billing",
+            "pages": [
+              "plans/overview",
+              "plans/upgrade"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "AI Profit Scanner — photo or text input → eBay sold comps → HOT / LIST / SKIP decision with real profit math after fees",
+    "Shelf Scan — one wide photo of a whole shelf; every visible item ranked by profit potential",
+    "Inventory — cost, sell price, status, photos, SKU auto-generation, synced to account",
+    "AI Listing Generator — titles, descriptions, condition notes, eBay categories from photos",
+    "Profit Hub — P&L dashboard, expenses, mileage logging, subscription management",
+    "Profit Compass — AI business brief with market trends, hunt list, stale item actions",
+    "Photo Agent — crop, enhance, background removal for listing photos",
+    "CSV Export — eBay Seller Hub bulk upload + full JSON backup/restore",
+    "Configurable profit math — eBay fee %, packaging cost, shipping, ROI target, tax reserve, IRS mileage rate",
+    "Freemium tiers — Scout (free, 25 scans/mo), Hustle ($19/mo), Stack ($49/mo), Empire ($199/mo)"
+  ],
+  "publicApiSurface": [
+    "POST /auth/register — create account with email + password",
+    "GET /auth/verify — verify email from inbox link",
+    "POST /auth/login — authenticate and receive JWT",
+    "supabase.functions.invoke('claude-proxy') — AI scan analysis (single item + shelf)",
+    "supabase.functions.invoke('stripe-checkout') — start paid plan checkout",
+    "supabase.functions.invoke('stripe-webhook') — Stripe event handler",
+    "supabase.functions.invoke('ebay-oauth') — connect eBay seller account",
+    "supabase.functions.invoke('auth') — auth operations",
+    "supabase.functions.invoke('cron') — scheduled background tasks",
+    "supabase.functions.invoke('export-reminder') — CSV export reminder emails"
+  ]
+}
